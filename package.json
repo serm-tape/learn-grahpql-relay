@@ -1,0 +1,17 @@
+{
+  "name": "learn-graphql-relay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "serm-tape",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "graphql": "^0.9.1"
+  }
+}
