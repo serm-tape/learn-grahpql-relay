@@ -1,6 +1,7 @@
 
 import express from 'express'
-import schema from './schema'
+import userSchema from './schema'
+import mdb from './mock'
 
 import {graphql} from 'graphql'
 import bodyParser from 'body-parser'
@@ -11,7 +12,7 @@ const PORT = 3000;
 app.use(bodyParser.text({type: 'application/graphql'}))
 
 app.post('/graphql', (req, res) => {
-    graphql(schema, req.body)
+    graphql(userSchema, req.body)
     .then( result => {
         res.send(JSON.stringify(result, null, 4))
     })
