@@ -61,6 +61,13 @@ const UserType = new GraphQLObjectType({
         age: {type: GraphQLString},
         items: {
             type: new GraphQLList(ItemType),
+            resolve: (a, b) => {
+                const itemsData = []
+                for(let item of a.items){
+                    itemsData.push(mdb.items.filter( x => x.id == item)[0])
+                }
+                return itemsData
+            }
         },
     }
 })
