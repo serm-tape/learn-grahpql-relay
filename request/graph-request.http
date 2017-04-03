@@ -1,0 +1,19 @@
+POST http://localhost:3000/graphql
+Content-Type: application/graphql
+
+query {
+    users {
+        id
+        name
+        age
+        items {
+            id
+            name
+            power {
+                atk
+                def
+                spd
+            }
+        }
+    }
+}
